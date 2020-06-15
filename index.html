@@ -3,44 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Code Review - Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <div>
-            <h1>the code review</h1>  
-        </div>
+            <h1>the code review</h1> 
+    </header>
+    <main>
         <div>
             <h2>Signup for our newsletter</h2>
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </div>
-    </header>
-
-    <main>
         <form action="index.html">
-            <h3>Contact information</h3>
+            <fieldset class="upper-from">
+                <legend>Contact information</legend>
 
-            <label for="full_name">Full Name</label>
-            <input type="text" name="full_name" id="fullname">
+                <label for="fullname">Full Name*</label>
+                <input type="text" name="full_name" id="fullname" placeholder="Required" required>
 
-            <label for="email">Email  Address</label>
-            <input type="email" name="email" id="email">
+                <label for="email">Email  Address*</label>
+                <input type="email" name="email" id="email" placeholder="Required" required>
 
-            <label for="phone_number">Phone Number</label>
-            <input type="number" name="phone_number" id="phonenumber">
+                <label for="phonenumber">Phone Number</label>
+                <input type="number" name="phone_number" id="phonenumber">
 
-            <label for="street_adress">Street Adress</label>
-            <input type="text" name="street_adress" id="street">
+                <label for="street">Street Adress</label>
+                <input type="text" name="street_adress" id="street" placeholder="Street name">
 
-            <label for="city">City</label>
-            <input type="text" name="city" id="city">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" placeholder="City">
 
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="newyork">New York</option>
+                    <option value="california">California</option>
+                    <option value="texas">Texas</option>
+                </select>
 
-            <h3>Newsletter</h3>
+                <label for="zipcode">Zip Code</label>
+                <input type="text" name="zip_code" id="zipcode" placeholder="Zip code">
+            </fieldset>
+            <fieldset class="lower-form">
+                <legend>Newsletter</legend>
+                <p>Select the newsletters you would like to recieve.</p>
 
+                <input type="checkbox" name="html_news" id="htmlnews"><label for="htmlnews">HTML News</label><br>
+
+                <input type="checkbox" name="css_news" id="cssnews"><label for="cssnews">CSS News</label><br>
+
+                <input type="checkbox" name="javescript_news" id="javascriptnews"><label for="cssnews">JavaScript News</label><br>
+
+                <p>News letter format.</p>
+
+                <input type="radio" name="format" id="html"><label for="html">HTML</label><br>
+                <input type="radio" name="format" id="plain"><label for="plain">Plain text</label><br>
+
+                <label for="other">Other topics you'd like to hear about?</label>
+                <textarea name="other" id="other" cols="30" rows="10" placeholder="Type your topics here"></textarea>
+            </fieldset>
+      
+            <button type="submit">Sign Up</button>
         </form>
     </main>
-
     <footer>
         <p>Copyright The Code Review</p>
     </footer>
