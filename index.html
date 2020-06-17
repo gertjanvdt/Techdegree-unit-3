@@ -13,48 +13,64 @@
             <h1>the code review</h1> 
     </header>
     <main>
-        <div>
+        <div class="form-head">
             <h2>Signup for our newsletter</h2>
             <p>Get the latest news on how your code is doing right in your inbox</p>
         </div>
         <form action="index.html">
-            <fieldset class="upper-from">
+            <fieldset class="upper-form">
                 <legend>Contact information</legend>
 
-                <label for="fullname">Full Name*</label>
-                <input type="text" name="full_name" id="fullname" placeholder="Required" required>
+                <div class="form-element">
+                    <label for="fullname">Full Name*</label>
+                    <input type="text" name="full_name" id="fullname" placeholder="Required" required>
+                </div>
+                
+                <div class="form-element">
+                    <label for="email">Email  Address*</label>
+                    <input type="email" name="email" id="email" placeholder="Required" required>
+                </div>
 
-                <label for="email">Email  Address*</label>
-                <input type="email" name="email" id="email" placeholder="Required" required>
+                <div class="form-element">
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="number" name="phone_number" id="phonenumber">
+                </div>
 
-                <label for="phonenumber">Phone Number</label>
-                <input type="number" name="phone_number" id="phonenumber">
+                <div class="form-element">
+                    <label for="street">Street Adress</label>
+                    <input type="text" name="street_adress" id="street" placeholder="Street name">
+                </div>
 
-                <label for="street">Street Adress</label>
-                <input type="text" name="street_adress" id="street" placeholder="Street name">
+                <div class="form-element">
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city" placeholder="City">
+                </div>
 
-                <label for="city">City</label>
-                <input type="text" name="city" id="city" placeholder="City">
+                <div class="form-element">
+                    <label for="state">State</label>
+                    <select name="state" id="state">
+                        <option value="state1">State 1</option>
+                        <option value="state2">State 2</option>
+                        <option value="state3">State 3</option>
+                    </select>
+                </div>
 
-                <label for="state">State</label>
-                <select name="state" id="state">
-                    <option value="newyork">New York</option>
-                    <option value="california">California</option>
-                    <option value="texas">Texas</option>
-                </select>
-
-                <label for="zipcode">Zip Code</label>
-                <input type="text" name="zip_code" id="zipcode" placeholder="Zip code">
+                <div class="form-element">
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" name="zip_code" id="zipcode" placeholder="Zip code">
+                </div>
             </fieldset>
+
             <fieldset class="lower-form">
                 <legend>Newsletter</legend>
                 <p>Select the newsletters you would like to recieve.</p>
+
 
                 <input type="checkbox" name="html_news" id="htmlnews"><label for="htmlnews">HTML News</label><br>
 
                 <input type="checkbox" name="css_news" id="cssnews"><label for="cssnews">CSS News</label><br>
 
-                <input type="checkbox" name="javescript_news" id="javascriptnews"><label for="cssnews">JavaScript News</label><br>
+                <input type="checkbox" name="javescript_news" id="javascriptnews"><label for="javascriptnews">JavaScript News</label><br>
 
                 <p>News letter format.</p>
 
@@ -62,7 +78,7 @@
                 <input type="radio" name="format" id="plain"><label for="plain">Plain text</label><br>
 
                 <label for="other">Other topics you'd like to hear about?</label>
-                <textarea name="other" id="other" cols="30" rows="10" placeholder="Type your topics here"></textarea>
+                <textarea name="other" id="other" placeholder="Type your topics here"></textarea>
             </fieldset>
       
             <button type="submit">Sign Up</button>

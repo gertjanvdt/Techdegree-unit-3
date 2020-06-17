@@ -1,11 +1,14 @@
 * {
     box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(gray, white);
     font-family: 'Jura', sans-serif;
 }
 
 header {
     text-align: center;
-    background: gray;
     width: 100%;
     padding: .5em;
     text-transform: uppercase;
@@ -17,50 +20,73 @@ main {
     margin: auto;
 }
 
-main div {
-    text-align: center;
-    border-bottom: black 4px solid;
+form {
+    border-top: solid 2px black;
+    margin-top: 4px;
 }
 
+.form-head {
+    text-align: center;
+    border-bottom: black 4px solid; 
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 1em;
+}
 
 fieldset {
-    display: flex;
     border: none;
     padding: 0;
 }
 
-.upper-from input,
-.upper-from select,
+.upper-form {
+    border-bottom: solid 2px black;
+}
+
+.upper-form input,
+.upper-form select,
 textarea {
     width: 100%;
     margin: auto;
     padding: .75em;
     border-radius: 10px;
-    background: #e7e4e4;
     border: none;
+    margin-top: 1em;
 }
 
-.upper-from input:focus,
-.upper-from select:focus,
+.upper-form input:focus,
+.upper-form select:focus,
 textarea:focus {
-    border: lightseagreen 3px solid ;
+    border: lightseagreen 3px solid;
 } 
 
-.upper-from label {
-    margin-bottom: .5em;
-    margin-top: 1.5em;
+.form-element {
+    margin: 1em 0 1em 0;
+}
+
+.form-element label {
+    display: block;
 }
 
 .lower-form {
     display: inline-block;
+    width: 100%;
 }
 
 .lower-form input {
     margin: .75em .5em .75em 0;
 }
 
-input[type=checkbox]:checked{
-    border: red solid 1px;
+#zipcode {
+    width: 50%;
+}
+
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label  {
+   font-weight: bold;
+   font-style: italic;
 }
 
 button {
@@ -81,4 +107,37 @@ footer {
     text-align: center;
     margin: 2em;
     font-style: italic;
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .form-element{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .form-element input,
+    .form-element select {
+        width: 60%;
+    }
+
+    .form-element label {
+        width: 40%;
+    }
+
+    .upper-form input,
+    .upper-form select,
+    textarea {
+        margin: 0;
+    }
+
+    #zipcode {
+        width: 30%;
+    }
+
 }
