@@ -56,16 +56,17 @@ textarea {
     margin-top: 1em;
 }
 
-.upper-form input:focus,
-.upper-form select:focus,
-textarea:focus {
-    border: lightseagreen 4px solid;
-} 
-
 .upper-form input:hover,
 .upper-form select:hover,
 textarea:hover {
     border: lightseagreen 1px solid;
+} 
+
+.upper-form input:focus,
+.upper-form select:focus,
+textarea:focus {
+    outline: none;
+    border: lightseagreen 4px solid;
 } 
 
 .form-element {
