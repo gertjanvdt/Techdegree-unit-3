@@ -59,7 +59,13 @@ textarea {
 .upper-form input:focus,
 .upper-form select:focus,
 textarea:focus {
-    border: lightseagreen 3px solid;
+    border: lightseagreen 4px solid;
+} 
+
+.upper-form input:hover,
+.upper-form select:hover,
+textarea:hover {
+    border: lightseagreen 1px solid;
 } 
 
 .form-element {
@@ -87,6 +93,10 @@ input[type=checkbox]:checked + label,
 input[type=radio]:checked + label  {
    font-weight: bold;
    font-style: italic;
+}
+
+.other-topics {
+    margin: 2em 0 1em 0;
 }
 
 button {
@@ -131,8 +141,7 @@ footer {
     }
 
     .upper-form input,
-    .upper-form select,
-    textarea {
+    .upper-form select {
         margin: 0;
     }
 
